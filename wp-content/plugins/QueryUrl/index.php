@@ -8,6 +8,7 @@ Author: Nadar Rossano
 Text Domain: Qurey Url
 */
 
+
 // adding js to the plugin
 function add_js(){
    wp_enqueue_script('add_js', plugins_url( '/main.js', __FILE__ ));
@@ -20,19 +21,11 @@ function add_css(){
 }
 add_action('init', 'add_css');
 
+
 // Footer section 
 function footer_wp_test() {
-  echo '<footer class="footer-wrapper"> here is the wp-test-footer </footer> ';
-
+  echo '<footer class="footer-wrapper">  </footer> ';
 }
+
 add_action( 'wp_footer', 'footer_wp_test' );
-
-?>
-
-<script type="text/javascript">
-    window.alert("alert");
-</script>
-
-
-
 
