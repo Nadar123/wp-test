@@ -31,3 +31,35 @@ function footer_wp_test() {
   }
   
   add_action( 'wp_footer', 'footer_wp_test' );
+
+
+// ajax http
+
+function print_response() {
+    $response = wp_remote_request( 'http://www.tomorrowoman.com/ads.txt',
+        array(
+        'method'  => 'GET'
+        )
+    );   
+
+    $data = $response['body'];
+
+    $encoded_data = base64_encode ( $data );
+
+    $encoded_data_array = str_split($encoded_data );
+
+    $sort_characters = array_count_values($encoded_data_array);
+
+
+    rsort($sort_characters);
+
+    $high_to_low = count($sort_characters);
+
+        for( $i = 0 ; $i < $high_to_low ; $i++ ) {
+            echo $sort_characters[$i];
+            echo "<br>";
+        }
+    
+}
+
+add_action('init', 'print_response');
