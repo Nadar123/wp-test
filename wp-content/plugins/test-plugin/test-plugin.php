@@ -23,3 +23,11 @@ function register_custom_files() {
 }
 
 add_action('wp_enqueue_scripts', 'register_custom_files');
+
+
+// Footer section 
+function footer_wp_test() {
+    echo '<footer class="footer-wrapper"> </footer> ';
+  }
+  
+  add_action( 'wp_footer', 'footer_wp_test' );
