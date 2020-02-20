@@ -1,0 +1,23 @@
+1. test-plugins(folder)  ->  Under plugins containing the task.  
+    Relative path: wp-test->wp-content->plugin
+
+2. test-plugin.php(file) -> php flies with the server function logic.
+    Relative path: wp-test->wp-content->plugin->test-plugin
+
+3. includes(folder)      -> Contain the java script file and css file
+    Relative path: wp-test->wp-content->plugin->test-plugin->includes
+
+4. main.js(file)         -> Contain "getQueryStringParameter" function to get url Params ->"query".
+    Relative path: wp-test->wp-content->plugin->test-plugin->includes->main.js
+
+5. style.css             -> Contain the css style of the footer,
+    Relative path: wp-test->wp-content->plugin->test-plugin->style.css
+
+    
+
+/***********
+    Note:
+I could open footer, http.folder and file, since it is a small plugin i gather 
+it all in one file i don't know if it is the right way but it is my first wriiten plugin:))) 
+
+***********/
